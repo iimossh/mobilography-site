@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilography Site Redesign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,776;1,776&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">Обо мне</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="header">
+        <h1>Контакты</h1>
+        <section class="content">
+            <div class = "textt">
+            <p>Способы свзяаться со мной:</p>
+            </div>
+            <div class="contact-buttons">
+            <a href="https://wa.me/yourphonenumber" target="_blank" class="button whatsapp">
+                <img src="assets/whatsapp-icon.jpg">
+            </a>
+            <a href="https://www.instagram.com/yourusername" target="_blank" class="button instagram">
+                <img src="assets/Instagram-icon.png">
+            </a>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 500); // Время должно совпадать с длительностью анимации fadeOut
+            });
+        });
+
+        window.addEventListener('load', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>

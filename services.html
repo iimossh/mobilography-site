@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilography Site Redesign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,776;1,776&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">Обо мне</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="header">
+        <h1>Услуги</h1>
+        <section class="content">
+            <div class = "textt">
+            <p>Я предлагаю полный спектр мобильной съемки, ориентированной на качество и стиль. В моем арсенале — репортажная, портретная и fashion-съемка, а также создание уникального контента для социальных сетей. Каждая съемка проходит с учетом последних трендов и технологий, что позволяет добиваться впечатляющих результатов даже с использованием мобильного устройства.
+
+                Мой подход — это сочетание креативности, внимания к деталям и стремления к совершенству. Если тебе нужен контент, который выделяется из толпы и отражает индивидуальность, мои услуги — это то, что тебе нужно.</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 500); // Время должно совпадать с длительностью анимации fadeOut
+            });
+        });
+
+        window.addEventListener('load', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>

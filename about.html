@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,776;1,776&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">Обо мне</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="header">
+        <h1>Обо мне</h1>
+        <section class="content">
+            <div class = "textt">
+            <p>Привет! Я — мобилограф с двухлетним опытом, создающий качественные и стильные кадры, которые рассказывают истории. За это время я понял, что настоящий успех в съемке зависит не только от технических возможностей, но и от умения передать атмосферу, характер и индивидуальность каждого проекта.
+
+                
+                В своей работе я уделяю особое внимание деталям, экспериментирую с ракурсами и играю со светом, чтобы каждая съемка становилась не просто записью момента, а настоящим произведением искусства. Для меня качество — это основа, а стиль — то, что делает работы уникальными. Если ты ищешь нечто большее, чем просто фиксирование мгновений, а настоящий визуальный рассказ, добро пожаловать в мир, где стиль и качество идут рука об руку.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 500); // Время должно совпадать с длительностью анимации fadeOut
+            });
+        });
+
+        window.addEventListener('load', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>
