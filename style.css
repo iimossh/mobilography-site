@@ -139,3 +139,7 @@ footer a {
 footer a:hover {
     color: #e64a19;
 }
+
+button[rel="ar"] {
+  display: none !important;
+}
