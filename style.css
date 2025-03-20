@@ -1,45 +1,48 @@
+/* Анимированный градиент для фона */
 body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    animation: backgroundShift 10s infinite alternate;
 }
-header {
-    padding: 20px;
+
+@keyframes backgroundShift {
+    from { background: linear-gradient(135deg, #121212, #1e1e1e); }
+    to   { background: linear-gradient(135deg, #1e1e1e, #121212); }
 }
-h1 {
-    font-size: 24px;
+
+/* Эффект свечения при наведении на ссылки навигации */
+nav ul li a:hover {
+    color: #ff5722;
+    text-shadow: 0 0 10px #ff5722;
+    transition: all 0.3s ease;
 }
+
+/* Анимация подчеркивания для цитаты */
 .quote {
-    font-style: italic;
-    color: #aaa;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-section {
-    margin: 40px 20px;
-}
-.button {
+    position: relative;
     display: inline-block;
-    background: #ff5722;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px;
 }
+
+.quote::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+}
+
+.quote:hover::after {
+    width: 100%;
+}
+
+/* Плавное увеличение кнопок при наведении */
+.button {
+    transition: transform 0.3s ease;
+}
+
 .button:hover {
-    background: #e64a19;
+    transform: scale(1.05);
 }
