@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'MyFont';
-    src: url('./font.otf') format('opentype');
+    src: url('./font.otf') format('truetype');
+    font-style: normal; 
+    font-weight: normal; 
 }
 
 /* Сброс отступов */
@@ -37,6 +39,7 @@ header {
 }
 h1 {
     font-size: 24px;
+    font-family: "MyFont";
 }
 .quote {
     font-style: italic;
