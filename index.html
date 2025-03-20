@@ -81,6 +81,8 @@
             document.getElementById(id).classList.add('active');
         }
     </script>
+</head>
+<body onload="showSection('about')">
     <div id="scene-container"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -112,8 +114,6 @@
 
     animate();
 </script>
-</head>
-<body onload="showSection('about')">
     <header>
         <h1>Мобилография, но только со стилем</h1>
         <p class="quote">"Мы делаем стиль. Но не так, как все."</p>
