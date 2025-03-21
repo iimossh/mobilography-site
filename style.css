@@ -39,10 +39,12 @@ body {
     padding: 0;
     position: relative;
     overflow-x: hidden;
+    overscroll-behavior-y: contain;
 }
 
 html {
     overflow-x: hidden; /* Отключаем горизонтальный скроллинг на уровне всего документа */
+    overscroll-behavior-y: contain; /* Блокируем "bounce effect" по вертикали */
 }
 
 body::before {
