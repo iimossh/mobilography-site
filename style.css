@@ -45,6 +45,7 @@ body {
 html {
     overflow-x: hidden; /* Отключаем горизонтальный скроллинг на уровне всего документа */
     overscroll-behavior-y: contain; /* Блокируем "bounce effect" по вертикали */
+    background-color: black; /* Цвет за пределами контента */
 }
 
 body::before {
