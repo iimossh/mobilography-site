@@ -41,6 +41,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    overflow-x: hidden; /* Отключаем горизонтальный скроллинг на уровне всего документа */
+}
+
 body::before {
     content: "";
     position: absolute;
@@ -134,10 +138,9 @@ nav a:hover {
 }
 
 .content {
-    padding: 40px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    margin: 30px auto;
     width: 80%;
     border-radius: 15px;
     color: #eee;
